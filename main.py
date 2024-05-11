@@ -5,7 +5,7 @@ from art import logo, x_wins, o_wins, is_a_draw
 # Function to draw the game board
 def drawBoard(x, o):
     # Create an empty board with dashes
-    board = ["-", "-", "-", "-", "-", "-", "-", "-", "-"]
+    board = [" ", " ", " ", " ", " ", " ", " ", " ", " "]
 
     # Fill in X's and O's in their respective positions
     for i in x:
