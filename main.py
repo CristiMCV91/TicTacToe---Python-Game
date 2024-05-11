@@ -25,20 +25,20 @@ def drawBoard(x, o):
 # Function to let the player select their symbol
 def selectPlayer(players):
     # Prompt the user to select 'X' or 'O' for the game
-    real_player = input('Select [X / O] for the game: ').capitalize()
+    real_player = input('Select [X / 0] for the game: ').capitalize()
     print("\n")
 
     # Validate the input
-    while not (real_player == "X" or real_player == "O"):
+    while not ((real_player == "X") or (real_player == "0")):
         real_player = input('Select [X / O] for the game: ').capitalize()
         print("\n")
 
     # Assign symbols to players based on user input
     if real_player == "X":
         players[0] = "X"
-        players[1] = "O"
-    elif real_player == "O":
-        players[0] = "O"
+        players[1] = "0"
+    elif real_player == "0":
+        players[0] = "0"
         players[1] = "X"
 
     return players
@@ -73,7 +73,7 @@ def asignNumbers(players, x, o):
                 while (number_pc in x) or (number_pc in o):
                     number_pc = random.randint(1, 9)
                 o.append(number_pc)
-        elif players[0] == "O":
+        elif players[0] == "0":
             while (number in x) or (number in o):
                 number = int(input('Select an available position from 1-9 : '))
                 print("\n")
